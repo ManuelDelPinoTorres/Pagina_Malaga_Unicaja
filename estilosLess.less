@@ -1,0 +1,154 @@
+@backgound_1: #0E2143;
+@width_carta_jugador: 100%;
+@backgound_2: #0033A0;
+@backgound_3: #08172B;
+@background_4: #0e2143af;;
+@borde_cartas: none;
+@color_letras_clasificacion: white;
+@alineacion_tr: center;
+@radius_0: 0px;
+@height_imagen_top:80%;
+@with_carousel:30%;
+@direccion_columnas_flex_menu:column;
+@with_parrafo: 70%;
+@display_parrafo: block;
+@fuente_parrafo: 1.5rem;
+@alineado_parrafo: justify;
+@with_img_footer: 25%;
+@margin_auto: auto;
+@with_jugadores:70%;
+@m_bottom_jugadores:5rem;
+@display_menu: flex;
+@justify_menu: space-between;
+@align-items: center;
+@color_letras:white;
+@heigth_with_img_clasif:35px;
+
+.estilosCarousel {
+    width: @with_carousel;
+    display: @display_parrafo;
+    margin-left: @margin_auto;
+    margin-right: @margin_auto;
+    background-color: @background_4;
+}
+
+.estilosImajenesTop {
+    width: @width_carta_jugador;
+    height: @height_imagen_top;
+    background-color: @backgound_3;
+}
+
+.estilosResumen(@with, @borde, @color) {
+    width: @with;
+    border-radius: @borde;
+    color: @color;
+}
+
+.estiloImagenFooter(@with, @margin_auto) {
+    width: @with;
+    margin-left: @margin_auto;
+    margin-right: @margin_auto;
+}
+
+.menu {
+    background-color: @backgound_1;
+}
+
+.logo,
+.card-body {
+    background-color: @backgound_2;
+}
+
+
+
+.carousel_jugadores {
+    width: @with_jugadores;
+    margin-bottom: @m_bottom_jugadores;
+}
+
+.presentacion_carousel {
+    .estilosCarousel;
+}
+
+.carta_jugador {
+    border: @borde_cartas;
+    width: @width_carta_jugador;
+    border-radius: @radius_0;
+}
+
+.carta_jugador img{
+.estilosImajenesTop()
+}
+
+#resumen {
+    border: @borde_cartas;
+    background-color: @backgound_2;
+    .estilosResumen(@width_carta_jugador, @radius_0, @color_letras_clasificacion )
+}
+
+tr {
+    text-align: @alineacion_tr;
+}
+
+
+
+.body_table_class tr td,
+h1,h4 {
+    color: @color_letras;
+}
+
+thead tr {
+    background-color: @backgound_1;
+    color: @color_letras_clasificacion;
+}
+
+h2,
+h1,
+h4 {
+    text-align: @alineacion_tr;
+}
+
+.footer {
+    background-color: @backgound_1;
+}
+
+.footer div img {
+    .estiloImagenFooter(@with_img_footer, @margin_auto);
+}
+
+
+
+.menuEstilo {
+    display: @display_menu;
+    justify-content: @justify_menu;
+    align-items: @align-items;
+}
+
+.contenedor_menu {
+    .menuEstilo;
+}
+
+
+
+#resumen .card-body p {
+    width: @with_parrafo;
+    display: @display_parrafo;
+    margin-left: @margin_auto;
+    margin-right: @margin_auto;
+    font-size: @fuente_parrafo;
+    text-align: @alineado_parrafo;
+}
+
+
+
+.contenedor_header{
+    display: @display_menu;
+    width: @width_carta_jugador;
+    height: @width_carta_jugador;
+    flex-direction: @direccion_columnas_flex_menu;
+}
+
+.img_clasif{
+    height: @heigth_with_img_clasif;
+    width: @heigth_with_img_clasif;
+}
